@@ -1,51 +1,37 @@
-# attendance_recorder
-Implement the attendance recorder application: We developed a web-based application using HTML5, CSS3, JavaScript, PHP, and MySQL, ensuring a seamless and efficient user experience.
+# Attendance Recorder
 
-Authenticate the user: Implemented a robust user authentication system to secure the application. Users need to enter valid credentials to access their roles.
+## Introduction
 
-Allow the teacher to view sessions: Teachers are provided with a master view displaying current attendance sessions, along with lists of previous and upcoming sessions.
+The Attendance Recorder lab project aimed to create a robust web-based system for managing and recording attendance for students in a course. The system utilized PHP as the primary programming language along with a MySQL database to store student, teacher, course, enrollment, and attendance-related information.
 
-Enable attendance marking for teachers: Teachers can mark attendance for any student in any session effortlessly. The system ensures a user-friendly experience for our educators.
+## Functionalities
 
-Enable students to view their attendance: Created a dedicated page for students to easily view their attendance records. This ensures transparency and keeps students in the loop.
+### User Authentication
 
-Color code the attendance: Implemented a color-coded system for visualizing attendance records. Attendance below 75% is bolded and shown in red, below 85% in yellow, and 85% and above in green.
+- The system implemented user authentication for both students and teachers.
+- Passwords were securely stored using PHP's `password_hash()` and `password_verify()` functions.
 
-Single master view interface: Designed a clean and intuitive interface with a single master view, making navigation straightforward for users.
+### Student Dashboard
 
-Database Structure
-We structured the MySQL database with three essential tables:
+- Upon successful login, students were redirected to a dashboard displaying their attendance details.
+- The dashboard presented the student's name, email, previous attendances, and the percentage of attendance in each subject.
 
-attendance: Records attendance details including class ID, student ID, presence status, and comments.
-class: Stores information about classes, including the teacher ID, start and end times, and credit hours.
-user: Manages user information such as full name, email, class, and role ('teacher', 'student', or 'admin').
-Implementation Details
-User Authentication: Implemented a secure login system using PHP to authenticate users based on their roles. This ensures that only authorized individuals access specific features.
+### Teacher Dashboard
 
-Master View Interface: Created a master view featuring navigation links for teachers and students, simplifying access to their respective pages.
+- Teachers, upon login, accessed a dashboard showcasing the courses they were teaching.
+- Functionalities included taking attendance for enrolled students in respective courses and viewing past attendance records.
 
-Teacher Page:
+### Attendance Recording
 
-Displays the current attendance session.
-Shows lists of previous and upcoming sessions.
-Allows marking attendance for any student in any session.
-Student Page:
+- The system allowed teachers to mark students as 'present' or 'absent' for a particular session.
+- PHP functions were used to process the submitted attendance data and insert/update records in the database accordingly.
 
-Enables students to view their attendance records.
-Implements color-coded visualization based on specified criteria.
-Color Coding Logic:
+## Website
 
-Developed logic to dynamically apply color codes to attendance records, enhancing the visual representation of student performance.
-Nice Interface:
-
-Utilized HTML5, CSS3, and JavaScript to design an aesthetically pleasing and responsive user interface, ensuring an enjoyable user experience.
-Tools/Software Requirement
-Frontend Development:
-HTML5, CSS3, and JavaScript.
-Backend Development:
-PHP for server-side scripting.
-MySQL for the database.
-Development Environment:
-Web server (e.g., Apache).
-MySQL Database Server.
-Code editor (e.g., Visual Studio Code).
+![](images/1_login.jpg)
+![](images/2_Teacher%20Dashboard.jpg)
+![](images/3_Teacher's%20Previous%20Sessions.jpg)
+![](images/4_Teacher%20Updating%20Attendance%20of%20a%20Particular%20Session.jpg)
+![](images/5_Update%20status%20form.jpg)
+![](images/6_Take%20attendance%20form.jpg)
+![](images/7_Student%20Dashboard.jpg)
